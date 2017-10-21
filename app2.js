@@ -1,5 +1,5 @@
 
-import  {map, filter}  from 'lodash'
+import  {map, filter, reduce}  from 'lodash'
 
 var arr1 = [1,2,3,4,5,5,4,3,2,1]
 
@@ -65,3 +65,13 @@ var arr7 = filter([1,2,3,2,1,2,3,4,3,2,1], (item) => item %2 === 0)
 console.log(arr7)
 
 
+var arr8 = reduce([1,2,1,2,3,4,3,2,1,2,3,3,3,3,2,1,], (sum, n) =>  sum + n, 0)
+
+var arr9 = reduce({'a': 3, 'b' : 2, 'c':4 }, (result, value, key) => {
+    (result[value] || (result[value] = [])).push(key)
+    return result;
+}, {})
+
+console.log(arr9)
+
+//Function for reduce recieves 4 args, accunulator, currentValue, currentIndex, array
