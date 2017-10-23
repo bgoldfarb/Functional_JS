@@ -74,4 +74,4 @@ var arr9 = reduce({'a': 3, 'b' : 2, 'c':4 }, (result, value, key) => {
 
 console.log(arr9)
 
-//Function for reduce recieves 4 args, accunulator, currentValue, currentIndex, array
+//Function for reduce recieves 4 args, accumulator, currentValue, currentIndex, array
