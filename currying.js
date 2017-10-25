@@ -1,4 +1,6 @@
 import has from 'lodash/has';
+import curry from 'lodash/curry';
+
 let dragon = (name, size, element) =>
     name + 'is a ' + 
     size + ' dragon that breathes '+
@@ -20,10 +22,22 @@ var brianDragon = arrowDragon("Brian")
 console.log(brianDragon("ice")("fire"))
 
 
-function volume( l, w, h ) {  
-    return l * w * h;
-  }
-  
-  var curried = curry( volume );
-  
-  console.log(curried( 1 )( 2 )( 3 )) // 6 
+
+
+
+var add = (a, b) => (a + b);
+
+var add = (a) => (b) => (c) => a + b + c;
+
+
+
+console.log(add(1)(2)(3))
+
+var abc = function(a,b,c){
+    return [a,b,c];
+}
+
+var curriedAbc = curry(abc);
+
+console.log(curriedAbc(1)(2)(3))
+console.log(curriedAbc(1,2,3))

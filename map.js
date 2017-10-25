@@ -86,9 +86,7 @@ console.log(maleAgeAverage)
 var femaleAgeTotal = chain(employees)
                         .filter((females) => females.gender === "F")
                         .map((females) => females.age)
-                        .reduce(function(acc, age){
-                            return acc + age;
-                        })
+                        .reduce((acc, age) => acc + age)
                         .value()
 
  var females = filter(employees, (female) => female.gender === "F")
